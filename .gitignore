@@ -1,0 +1,15 @@
+# Virtual Environments
+env/
+venv/
+
+# Data Files
+*.csv
+Dataset/
+
+# Python Cache & System Files
+__pycache__/
+*.pyc
+.DS_Store
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
