@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-data = pd.read_csv("Dataset/Dataset.csv")
+data = pd.read_csv("Dataset/Dataset.csv", lineterminator='\n')
 data = data.replace("Not Given", np.nan)
 
 data["date_added"] = pd.to_datetime(data["date_added"], format = "%d/%m/%Y", errors = "coerce") #convert data_added column to standard datetime format
