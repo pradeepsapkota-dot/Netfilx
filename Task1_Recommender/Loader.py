@@ -7,12 +7,18 @@ def load_data(filepath):
     data = pd.read_csv(filepath, lineterminator='\n')
     data = data.replace("Not Given", np.nan)
 
+    # Strip hidden characters from column names
+    data.columns = data.columns.str.strip()
+
     # convert data_added column to standard datetime format
     data["date_added"] = pd.to_datetime(
         data["date_added"], format="%d/%m/%Y", errors="coerce")
+
     data["year_added"] = data["date_added"].dt.year  # Extract only the years
+
     data["duration_no"] = data["duration"].str.split(" ").str[0].astype(
         float)  # Split the duration column into a number and unit
+
     data["duration_unit"] = data["duration"].str.split(
         " ").str[1]  # "90 min" becomes 90 and "min" becomes unit
 
