@@ -1,10 +1,10 @@
-# Netflix Data Analysis & Machine Learning Project
+# Netflix Data Analysis & Machine Learning Pipeline
 
-## Project Description
+## Project Overview
 
-This project demonstrates a complete machine learning pipeline and data analysis project completed for the Auspify Data Science Internship. The goal of the project was to derive business insights from the Netflix dataset using a variety of machine learning algorithms along with time series forecasting.
+This is an example of a complete machine learning pipeline and data analysis project which was undertaken as part of the Auspify Data Science Internship. The objective of the project was to gain business insights from the Netflix data set using a number of different machine learning algorithms.
 
-The project has gone above and beyond the requirements of the internship by completing 5 different tasks to display skills in data engineering, prediction models, clustering and recommendation systems.
+The project went above and beyond the requirements of the internship. As a result, the project includes all 6 tasks. This shows a vast range of skills including data engineering, predictive models, clustering, recommendations and automated business intelligence.
 
 ## Project Structure
 
@@ -17,15 +17,17 @@ The project has been divided into sections for each task, with a central loader 
 - Task3_Audience_Rating_Classification - This uses a Decision Tree to classify audience demographics (Kids/Teens/Adults).
 - Task4_Content_Segmentation - This uses K-Means clustering to segment movie runtimes and historical periods.
 - Task5_Netflix_Trend_Forecasting_Model - This uses time series exponential smoothing to forecast monthly content additions.
+- Task6_Success_Analytics_Engine - contains the complete ML pipeline (Gradient Boosting & NLP) to provide automated business intelligence regarding global expansion.
 
 - Loader.py - This is a central script used to load in the data, format dates and remove hidden characters.
 
-## Highlights & Techniques
+## Key Points & Techniques
 
-No data leakage! Features were removed that would give away the target (i.e. removing duration units when classifying TV or Movies).
-Feature Engineering! Multiple different categorical features were combined to create tags, these were then vectorized.
-Time Series Analysis! Complex time series aggregations were performed (.resample) to identify how the company has been growing over time, despite real world volatility (i.e. pandemic affecting production).
-Unsupervised Learning! Features were scaled (StandardScaler) and clustered based on distance to mathematically demonstrate the shift in strategy towards modern short form content.
+Data leakage was avoided by auditing the data and removing any columns that provided artificial insight into the target. For example, the duration unit was dropped before predicting if it was a TV show or movie.
+Feature Engineering was conducted to merge different categories (Directors, Genres, Countries) into one column with tags. This then was vectoriser using TF-IDF.
+Time series analysis was conducted to show how the platform grew over time using `.resample`. This allowed us to see how the platform grew over time despite the real world issues such as delays due to the pandemic.
+The data was scaled using `StandardScaler` and clustered together using the distance between the features. This helped to prove that the business have made the right decision to focus on short form modern content.
+Automated business intelligence was created by building a modelops pipeline to compare the different algorithms. We also extracted the feature importance from the winning model so we can understand what factors are impacting the outcome.
 
 ## Technologies Used
 
@@ -59,5 +61,5 @@ Each task has been placed into its own folder and uses the central `Loader.py` s
 
 ```bash
 cd Task1_Recommender
-python task1_recommender.py
+python task1.py
 ```
