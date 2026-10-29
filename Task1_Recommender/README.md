@@ -1,5 +1,3 @@
-
-
 # Task 1: Netflix Content Recommendation System
 
 ## Objective
@@ -26,9 +24,10 @@ The model was tested using two different titles.
 **Success (Midnight Mass):** The algorithm found a good group of horror titles (*Gerald's Game*, *Hush*, *Before I Wake*). As the dataset had a high weighting on a unique identifier (Director: Mike Flanagan), the TF-IDF vectoriser grouped titles together with high similarity scores (~0.83).
 
 **Limitations (Sankofa):** For titles with little metadata or a common director, the model will rely on the genre and country. This results in low similarity scores (~0.29-0.56).
-### Fig: Task Result
-![Task1](../Images/Task1.png)
 
+### Fig: Task Result
+
+![Task1](../Images/Task1.png)
 
 ## Conclusion
 
@@ -42,8 +41,7 @@ Run the script using the terminal:
 
 ```bash
 
-python task1_recommender.py
+python task1.py
 ```
-
 
 [def]: C:\Users\prade\Desktop\Netfilx\Images\Task1.png
